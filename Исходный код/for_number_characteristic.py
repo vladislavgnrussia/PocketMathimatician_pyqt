@@ -52,7 +52,7 @@ class Number:
         dividers = []
         result = []
         if num == 1:
-            return ['1', '1', '1',  'Нет', 'Нет']
+            return ['1', '1', '1', 'Нет', 'Нет']
 
         div = 2
         while num != 1:
@@ -139,13 +139,11 @@ class Number:
     def sin(self):
         return str(math.sin(math.radians(self.number)))
 
-
     def cos(self):
         return str(math.cos(math.radians(self.number)))
 
     def tan(self):
         return str(math.tan(math.radians(self.number)))
-
 
     def ctg(self):
         return str(1 / math.tan(math.radians(self.number)))
@@ -155,7 +153,6 @@ class Number:
 
     def natural_logarithm(self):
         return str(math.log(self.number, math.e))
-
 
     def bin_view(self):
         return str(bin(self.number))[2:]

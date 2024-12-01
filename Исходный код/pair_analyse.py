@@ -111,7 +111,7 @@ class PairAnalyse(QtWidgets.QWidget):
             self.calculate_result()
         except ValueError:
             button = QtWidgets.QMessageBox.critical(self, 'Ошибка!', 'Одно из введенных чисел не натурально'
-                                                    ' или вообще не является числом!',
+                                                                     ' или вообще не является числом!',
                                                     buttons=QtWidgets.QMessageBox.StandardButton.Close,
                                                     defaultButton=QtWidgets.QMessageBox.StandardButton.Close)
 
