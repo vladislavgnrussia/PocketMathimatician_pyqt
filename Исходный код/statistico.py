@@ -1,5 +1,3 @@
-import sys
-
 from PyQt6 import QtCore, QtGui, QtWidgets
 import os
 from for_statistico import Table, StatisticalAnalysis, NoSelectedTable

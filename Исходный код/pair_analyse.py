@@ -1,6 +1,5 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 from for_pair_analyse import Pair
-import sys
 
 
 class PairAnalyse(QtWidgets.QWidget):

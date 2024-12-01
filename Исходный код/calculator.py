@@ -1,5 +1,4 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
-from sys import exit, argv
 from math import sin, cos, radians, sqrt, pow
 from decimal import Decimal
 from statistico import error
