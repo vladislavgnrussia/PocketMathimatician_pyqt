@@ -261,32 +261,26 @@ class Calculator(QtWidgets.QWidget):
         self.expo_btn.setText(_translate("Form", "E"))
 
     def connecting(self):
-        self.n1_btn.clicked.connect(self.add_text)
-        self.n2_btn.clicked.connect(self.add_text)
-        self.n3_btn.clicked.connect(self.add_text)
-        self.n4_btn.clicked.connect(self.add_text)
-        self.n5_btn.clicked.connect(self.add_text)
-        self.n6_btn.clicked.connect(self.add_text)
-        self.n7_btn.clicked.connect(self.add_text)
-        self.n8_btn.clicked.connect(self.add_text)
-        self.n9_btn.clicked.connect(self.add_text)
-        self.n0_btn.clicked.connect(self.add_text)
+        num_buttons = [self.n1_btn, self.n2_btn, self.n3_btn,
+                       self.n4_btn, self.n5_btn, self.n6_btn,
+                       self.n7_btn, self.n8_btn, self.n9_btn,
+                       self.n0_btn]
+        for num_button in num_buttons:
+            num_button.clicked.connect(self.add_text)
         self.point_btn.clicked.connect(self.add_text)
 
-        self.plus_btn.clicked.connect(self.action)
-        self.minus_btn.clicked.connect(self.action)
-        self.multiple_btn.clicked.connect(self.action)
-        self.divide_btn.clicked.connect(self.action)
-        self.degree_btn.clicked.connect(self.action)
+        action_buttons = [self.plus_btn, self.minus_btn, self.multiple_btn, self.divide_btn, self.degree_btn]
+        for action_button in action_buttons:
+            action_button.clicked.connect(self.action)
+
+        clear_buttons = [self.clear_btn, self.clear_entry_btn, self.delete_btn]
+        for clear_button in clear_buttons:
+            clear_button.clicked.connect(self.clear)
 
         self.sin_btn.clicked.connect(self.function)
         self.cos_btn.clicked.connect(self.function)
 
         self.sqrt_btn.clicked.connect(self.sqrt)
-
-        self.clear_btn.clicked.connect(self.clear)
-        self.clear_entry_btn.clicked.connect(self.clear)
-        self.delete_btn.clicked.connect(self.clear)
 
         self.result_btn.clicked.connect(self.result)
 

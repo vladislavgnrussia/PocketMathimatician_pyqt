@@ -12,6 +12,7 @@ class Main(QtWidgets.QWidget):
         super().__init__()
         self.setupUi(self)
         self.connecting()
+        self.adding_icon()
         self.open_modes = False
         self.calculator_btn.hide()
         self.number_analyse_btn.hide()
@@ -67,11 +68,15 @@ class Main(QtWidgets.QWidget):
     def retranslateUi(self, Main):
         _translate = QtCore.QCoreApplication.translate
         Main.setWindowTitle(_translate("Main", "Карманный математик"))
-        self.mode_btn.setText(_translate("Main", "≡"))
+        self.mode_btn.setText(_translate("Main", ""))
         self.calculator_btn.setText(_translate("Main", "Калькулятор"))
         self.number_analyse_btn.setText(_translate("Main", "Анализ числа"))
         self.pair_analyse_btn.setText(_translate("Main", "Анализ пары"))
         self.table_analyse_btn.setText(_translate("Main", "Анализ таблицы"))
+
+    def adding_icon(self):
+        icon = QtGui.QIcon('Abacus.png')
+        self.mode_btn.setIcon(icon)
 
     def connecting(self):
         self.calculator_btn.clicked.connect(self.open_calculator)
